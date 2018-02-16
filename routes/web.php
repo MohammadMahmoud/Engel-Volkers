@@ -16,18 +16,18 @@ Route::get('/', function () {
     return view('welcome');
 })->name('landing');
 
-Route::get('/manage', 'HomeController@index')->name('manage');
+Route::get('/manage', 'HomeController@index')->name('manage')->middleware('auth');
 
 Route::get('/logout', function () {
     Auth::logout();
     return view('welcome');
 })->name('logout');
 
-Route::get('/client/create' , 'ClientsController@create')->name('create.client');
-Route::post('/client/store' , 'ClientsController@store')->name('store.client');
-Route::get('/client/edit/{id}' , 'ClientsController@edit')->name('edit.client');
-Route::post('/client/update' , 'ClientsController@update')->name('update.client');
-Route::get('/client/delete/{id}' , 'ClientsController@destroy')->name('delete.client');
+Route::get('/client/create' , 'ClientsController@create')->name('create.client')->middleware('auth');
+Route::post('/client/store' , 'ClientsController@store')->name('store.client')->middleware('auth');
+Route::get('/client/edit/{id}' , 'ClientsController@edit')->name('edit.client')->middleware('auth');
+Route::post('/client/update' , 'ClientsController@update')->name('update.client')->middleware('auth');
+Route::get('/client/delete/{id}' , 'ClientsController@destroy')->name('delete.client')->middleware('auth');
 
 Auth::routes();
 
