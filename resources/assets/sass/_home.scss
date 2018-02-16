@@ -1,0 +1,100 @@
+html, body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff !important;
+}
+
+.btn {
+  color: $main-color !important;
+  font-family: "Source Code Pro", sans-serif !important;
+  font-weight: 600 !important;
+  font-size:16px !important;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+p {
+  color: $p-color;
+}
+
+.btn.btn-square {
+  padding: 0.3em 1.2em !important;
+}
+
+.btn.btn-round {
+  padding: 0.3em 3em !important;
+  border-radius: 2em !important;
+  border: 4px solid transparent !important;
+}
+
+.btn-secondary {
+  border: 1px solid $secondary-color !important;
+  background-color: $secondary-color !important;
+  color: $main-color !important;
+  &:hover {
+    background-color: $main-color !important;
+    color: $secondary-color !important;
+  }
+}
+
+.landing {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)), url('/storage/images/girl-2618562_1920.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: $typo-color;
+  .links > a {
+    color: $typo-color;
+  }
+  .full-height {
+    height: 100vh;
+  }
+
+  .flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .position-ref {
+    position: relative;
+  }
+
+  .top-right {
+    position: absolute;
+    right: 15%;
+    top: 5%;
+  }
+
+  .top-left {
+    position: absolute;
+    left: 15%;
+    top: 5%;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .title {
+
+  }
+
+  .links > a {
+
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .m-b-md {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,23 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900");
+// Variables
+@import "variables";
+// Pages
+@import "home";
+@import "dashboard";
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+a {
+  color: $p-color !important;
+  transition-duration: 1s;
+  &:hover {
+    color: $typo-color !important;
+  }
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
